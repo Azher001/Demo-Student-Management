@@ -1,0 +1,22 @@
+<div style=" background-color: white; display: flex; flex-direction: column; padding: 40px;">
+
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <div style="display: flex; flex-direction: column;">
+            <span style="font-family: sans-serif; font-size: 24px; color: black;">{{studentInfo.name}}</span>
+            <span style="font-family: sans-serif; font-size: 12px; color: lightslategray; margin-top: 8px;">{{studentInfo.id}}</span>
+        </div>
+        
+    
+        <div>
+            <button mat-raised-button class="navigation-button" (click)="edit()">Edit Student</button>
+        </div>
+    </div>
+  
+
+    <hr style="height: 1px; width: 100%; color: cadetblue; ">
+
+    <span style="font-family: sans-serif; font-size: 12px; color: black; margin-top: 8px;">Department: {{studentInfo.department}}</span>
+    <span style="font-family: sans-serif; font-size: 12px; color: black; margin-top: 8px;">CGPA: {{studentInfo.cgpa}}</span>
+    <span style="font-family: sans-serif; font-size: 12px; color: black; margin-top: 8px;">Credits Completed: {{studentInfo.completedCredit}}</span>
+
+</div>

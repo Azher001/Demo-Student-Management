@@ -1,0 +1,31 @@
+<div style=" background-color: white; display: flex; flex-direction: column; padding: 40px; align-items: center;">
+
+    <span style="font-family: sans-serif; font-size: 24px; color: black;" *ngIf="!edit">Add A New Student</span>
+    <span style="font-family: sans-serif; font-size: 24px; color: black;" *ngIf="edit">Edit Student</span>
+    
+    <form style="margin-top: 24px; gap: 8px; display: flex; flex-direction: column;" [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Name" formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Id</mat-label>
+            <input matInput placeholder="Id" formControlName="id" [readonly]="edit">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Department</mat-label>
+            <input matInput placeholder="Department" formControlName="department">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>CGPA</mat-label>
+            <input matInput placeholder="CGPA" formControlName="cgpa">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Credits Completed</mat-label>
+            <input matInput placeholder="Credits Completed" formControlName="completedCredit">
+        </mat-form-field>
+        <button mat-raised-button class="navigation-button" type="submit">Submit</button>
+    </form>
+</div>
